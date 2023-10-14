@@ -1,0 +1,99 @@
+.about {
+    background-color:#333232;
+    padding: 113px 0 160px 0;
+    &__skills {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 183px;
+    }
+    &__skill {
+        display: flex;
+        padding: 50px 0 50px 0;
+        box-sizing: border-box;
+        gap: 66px;
+        flex-direction: column;
+        align-items: center;
+        width: 270px;
+        height: 270px;
+        border-radius: 29px;
+        background: #2A2A2A;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
+        color: $main-color-blue;
+        font-family: 'NEXT ART', sans-serif;
+        font-size: 66px;
+        font-weight: 700;
+    }
+    &__block {
+        position: relative;
+        max-width: 1100px;
+        z-index: 1;
+        margin: 0 auto;
+        &-image {
+            z-index: 2;
+            border: 20px solid #2C2C2C;
+            border-radius: 25px;
+            margin: 0 auto;
+            position: absolute;
+            & img {
+                    display: block;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    border: 10px solid #686868;
+                    box-sizing: border-box;
+            }
+            &:nth-child(1) {
+                top: -6%;
+                left: 1%;
+                width: 270px;
+                height: 320px;
+            }
+            &:nth-child(2) {
+                right: 0%;
+                top: 18%;
+                width: 280px;
+                height: 420px;
+            }
+            &:nth-child(3) {
+                width: 280px;
+                height: 320px;
+                left: 1%;
+                bottom: -11%;
+            }
+        }
+    }
+    &__text {
+        max-width: 496px;
+        padding: 0 63px 63px 63px;
+        background-color: #2C2C2C;
+        border-radius: 14px;
+        box-sizing:border-box;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        &-title {
+            font-family: 'NEXT ART', sans-serif;
+            bottom: 28px;
+            position: relative;
+        }
+    }
+    &__circle {
+        position: absolute;
+        z-index: 0;
+        &.circle_veryBig {
+            top: 12px;
+            right: 483px;
+        }
+        &.circle_small {
+            top: -47px;
+            right: 38px;
+        }
+        &.circle_med {
+            bottom: -106px;
+            right: 28px;
+        }
+        }
+    }
+   

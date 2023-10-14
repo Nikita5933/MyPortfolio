@@ -1,3 +1,137 @@
-div {
-    font-family: 'Arodora Pro';
-}
+.header {
+    background-color: #272727;
+    &__head {
+        margin: 26px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        &-wrapper {
+            width: 100%;
+            max-width: rem(710);
+            display: flex;
+            align-items: center;
+            margin-right: rem(80);
+        }
+        &-logo {
+            display: flex;
+            justify-content: space-between;
+            max-width: rem(180);
+            gap: rem(10);
+            text-decoration: none;
+            transition: text-shadow .2s;
+            &:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+        &-text {
+            color: #FFF;
+            font-family: 'Nico Moji', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            align-self: center;
+        }
+    }
+    &__link {
+        list-style-type: none;
+        transition: text-shadow .2s;
+        & a {
+            padding-bottom: 5px;
+            text-decoration: none;
+        }
+        &:hover {
+            text-shadow: 0 0 10px white;
+        }
+    }
+    &__menu  {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    &__about {
+        margin: rem(155) 0 rem(150) 0;
+        max-width: rem(536);
+    }
+   
+    &__subtitle {
+        font-family: "NEXT ART", sans-serif;
+        margin: 0 0 rem(27) 0;
+    }
+    &__title {
+        font-family: "NEXT ART", sans-serif;
+        margin: rem(27) 0;
+    }
+    &__text {
+        margin-bottom: rem(27);
+        max-width: rem(447);
+    }
+    &__picture {
+        & img {
+            position: relative;
+            height: 100%;
+            width: 78%;
+            left: 20px;
+            z-index: 1;
+        }
+    }
+    &__btn {
+        display: inline-block;
+        padding: 14px 20px;
+        border-radius: 6px;
+        background: $main-orange-color;
+        box-shadow: 0px 2px 13px 0px rgba(226, 158, 0, 0.48);
+        color: #000;
+        font-family: 'NEXT ART';
+        font-size: 18px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: normal;
+        text-decoration: none;
+        transition: opacity .2s;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    &__circle {
+        position: absolute;
+        z-index: 0;
+        right: 0px;
+        top: 140px;
+    }
+    &__elipse{
+        display: flex;
+        color: $main-color-blue;
+        font-family: 'Arodora Pro', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        justify-content: center;
+        align-items:center;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-image: linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%);
+        position: relative;
+        &:nth-child(1) {
+            left: 39px;
+            bottom: 94px;
+        }
+        
+        &:nth-child(2) {
+            left: 390px;
+            bottom: 150px;
+        }
+        &:nth-child(3) {
+            right: 105px;
+            bottom: 119px;
+        }
+        &:nth-child(4) {
+            right: 117px;
+            top: 16px;
+        }
+    }
+    }
