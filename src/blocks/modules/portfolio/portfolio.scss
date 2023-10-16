@@ -24,6 +24,9 @@
                 box-shadow: 0 0 10px#E29500;
             }
         }
+        &-next {
+            transform: rotate(180deg);
+        }
         &-wrapper {
             max-width: 970px;
             border-radius: 28px;

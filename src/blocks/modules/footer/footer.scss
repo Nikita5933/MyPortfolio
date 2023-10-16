@@ -1,0 +1,85 @@
+.footer {
+    background-color: #333232;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: rem(50);
+    }
+    &__links {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        &-link a {
+            color: $text-color;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__contact {
+        &-block {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            & div a {
+                color: $text-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &__logo {
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 2fr 1fr;
+        }
+        &-logo {
+            color: #FFF;
+            display: flex;
+            font-family: "Nico Moji", sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            align-self: center;
+            text-decoration: none;
+            margin: 0 0 23px 12px;
+            gap: 10px;
+            transition: text-shadow .3s;
+            &:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+        &-text {
+            align-self: center;
+        }
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-image: linear-gradient(87deg, #E2A300 4.47%, #E29500 95.53%);
+            border:none;
+            transform: rotate(90deg);
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+            &:hover {
+                box-shadow: 0 0 10px #E29500;
+            }
+        }
+        &-copy {
+            grid-column: 1/3;
+            margin-left: 20px;
+            align-self: flex-end;
+        }
+    }
+}
