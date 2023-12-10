@@ -1,13 +1,12 @@
-modules.define('portfolio', ['i-bem-dom'], function(provide, bemDom) {
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
-});
+    navigation: {
+      nextEl: '.portfolio__slider-next',
+      prevEl: '.portfolio__slider-prev',
+    },
+  });
+  swiper();
