@@ -4,6 +4,7 @@
     padding: 204px 0 150px 0;
     &__title {
         margin: 0 auto;
+        width: 610px;
         text-align: center;
     }
     &__slider {
@@ -85,7 +86,7 @@
                 width: 14px;
                 height: 1px;
                 top: 8.5px;
-                right: 160px;
+                right: 140px;
                 position: absolute;
                 display: block;
                 border-bottom: 1px solid $main-orange-color;
@@ -96,7 +97,7 @@
                 width: 8px;
                 height: 8px;
                 top: 5.5px;
-                right: 159px;
+                right: 140px;
                 position: absolute;
                 display: block;
                 border-bottom: 1px solid $main-orange-color;
@@ -106,6 +107,11 @@
         }
     }
 }
-.swiper-slide {
-    flex-shrink: 1;
+.swiper {
+    &-slide {
+        flex-shrink: 1;
+    }
+    &-pagination-bullet-active {
+        background-color: $main-color-blue;
+    }
 }

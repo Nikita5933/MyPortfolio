@@ -269,6 +269,9 @@
                     max-width: 190px;
                 }
             }
+            &__title {
+                width: 550px;
+            }
             &__slider {
                 position: static;
                 max-width: 714px;
@@ -400,6 +403,9 @@
                     top: 2px;
                 }
             }
+        }
+        &__title {
+            width: 470px;
         }
         &__slider {
             max-width: 520px;
@@ -549,6 +555,9 @@
                 }
             }
         }
+        &__title {
+            width: 390px;
+        }
         &__slider {
             max-width: 414px;
             &-prev {
@@ -630,6 +639,16 @@
                     top: 2px;
                 }
             }
+        }
+        &__title {
+           &.title_line {
+           &::after {
+            display: none;
+           }
+           &::before {
+            display: none;
+           }
+           }
         }
         &__slider {
             max-width: 341px;

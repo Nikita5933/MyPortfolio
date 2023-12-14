@@ -16,6 +16,14 @@
         font-size: rem(24);
         font-weight: 300;
     }
+    &_fz32 {
+        font-size: rem(32);
+        font-weight: 400;
+    }
+    &_fz40 {
+        font-size: rem(40);
+        font-weight: 500;
+    }
     &_fz48 {
         font-size: rem(48);
         font-weight: 600;
@@ -25,6 +33,28 @@
         font-size: rem(72);
         font-weight: 700;
         letter-spacing: 2px;
+    }
+    &_line {
+        position: relative;
+        overflow: hidden;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 0;
+            height: 3px;
+            width: rem(160);
+            background: linear-gradient(90deg,$main-orange-color 0,rgba(8,234,207,0) 100%);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0px;
+            height: 3px;
+            width: rem(160);
+            background: linear-gradient(90deg,rgba(8,234,207,0) 0,$main-orange-color 100%);
+        }
     }
 }
 

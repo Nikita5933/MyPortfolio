@@ -1,0 +1,21 @@
+.header-about {
+    background: url('../../../img/about-bg.png') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    &__block {
+        &-title {
+            text-align: center;
+            font-family: "NEXT ART", sans-serif;
+            margin: 70px 0;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__head {
+        margin-top: 0;
+        padding: 26px 0 16px 0;
+        background-color: #333232f7;
+    }
+}

@@ -10,7 +10,8 @@ html, body {
   body {
     display: flex;
     flex-direction: column;
-    
+    scrollbar-width: thin;
+    scrollbar-color: #555 #555;
   }
   * {
     scroll-behavior: smooth;
@@ -49,3 +50,25 @@ html, body {
       box-shadow: 0px 4px 40px 0px rgba(226, 162, 0, 0.25);
     }
   }
+
+// Scroll
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b5b5b5;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
