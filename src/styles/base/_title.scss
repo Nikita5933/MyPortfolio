@@ -3,6 +3,10 @@
     font-style: normal;
     line-height: normal;
     color: $text-color;
+    &_fz16 {
+        font-size: rem(16);
+        font-weight: 300;
+    }
     &_fz18 {
         font-size: rem(18);
         font-weight: 300;

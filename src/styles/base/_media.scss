@@ -520,6 +520,11 @@
         &__skills {
             margin-bottom: 300px
         }
+        &__card {
+            &-back {
+                font-size: 42px;
+            }
+        }
         &__block {
             width: 390px;
             &-image {
@@ -642,6 +647,7 @@
         }
         &__title {
            &.title_line {
+            width: 100%;
            &::after {
             display: none;
            }

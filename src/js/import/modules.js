@@ -1,4 +1,5 @@
 import "%modules%/header/header";
 import "%modules%/about/about";
-import "%modules%/portfolio/portfolio";
+import "%modules%/about-steps/about-steps";
 import "%modules%/footer/footer";
+import "%modules%/portfolio/portfolio";

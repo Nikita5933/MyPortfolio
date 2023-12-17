@@ -3,6 +3,10 @@
     padding: 30px 0;
     &__title {
         text-align: center;
-        margin: 20px 0 40px 0;
+        max-width: 640px;
+        margin: 20px auto 40px auto;
+    }
+    & .about__skills {
+        margin-bottom: 80px;
     }
 }
