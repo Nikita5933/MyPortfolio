@@ -36,8 +36,52 @@
         @@include("../../blocks/modules/about-steps/about-steps.html")
     </main>
     @@include("../../blocks/modules/about-footer/about-footer.html")
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../../js/vendor.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+
+        const SCROLL = 10;
+        const aboutSlider = document.querySelector('.about-steps .swiper');
+        let sec = document.createElement('div');
+        sec.innerHTML = aboutSlider.innerHTML;
+        let str = sec.innerHTML;
+        if (document.body.clientWidth < 768 - SCROLL) {
+            aboutSlider.classList.add('swiperSteps');
+            const swiper = new Swiper(".swiperSteps", {
+                slidesPerView: 3,
+                spaceBetween: 44,
+                freeMode: true,
+                roundLengths: true,
+                setWrapperSize: true,
+                loop: true,
+                width: 900,
+            });
+
+        }
+        window.addEventListener('resize', (event) => {
+            if (document.body.clientWidth < 768 - SCROLL) {
+                aboutSlider.classList.add('swiperSteps');
+                const swiper = new Swiper(".swiperSteps", {
+                    slidesPerView: 3,
+                    spaceBetween: 44,
+                    freeMode: true,
+                    roundLengths: true,
+                    setWrapperSize: true,
+                    loop: true,
+                    width: 900,
+                });
+
+            } else {
+                aboutSlider.remove();
+                sec.innerHTML = str;
+                document.querySelector('.about-steps .container').insertAdjacentElement('beforeend', sec)
+                sec.classList.add('swiper');
+                sec.classList.add('swiperSteps');
+            }
+
+        })
+
+    </script>
+
     <script src="../js/main.js"></script>
 </body>
 

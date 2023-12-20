@@ -36,8 +36,21 @@
         @@include("../blocks/modules/portfolio/portfolio.html")
     </main>
     @@include("../blocks/modules/footer/footer.html")
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/vendor.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.portfolio__slider-next',
+                prevEl: '.portfolio__slider-prev',
+            },
+        });
+    </script>
+    <!-- <script src="js/vendor.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 

@@ -31,6 +31,12 @@
             }
         }
     }
+    .about-steps {
+        &__wrapper {
+            justify-content: center;
+            gap: 60px;
+        }
+    }
 }
 @media (max-width: 1199px) {
     html {
@@ -142,6 +148,26 @@
         .footer {
             &__wrapper {
                 grid-template-columns: 2fr repeat(2, 3fr);
+            }
+        }
+        .about-technologies {
+            &__title {
+                max-width: 600px;
+            }
+        }
+        .about-skills {
+            &__title {
+                max-width: 900px;
+            }
+            &__wrapper {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 50px;
+            }
+        }
+        .about-steps {
+            &__title {
+                max-width: 650px;
             }
         }
     }
@@ -307,6 +333,27 @@
                 }
             }
         }
+        .about-technologies {
+            &__title {
+                max-width: 550px;
+            }
+        }
+        .about-skills {
+            &__title {
+                max-width: initial;
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .about-steps {
+            &__title {
+                max-width: 600px;
+            }
+        }
 }
 @media (max-width: 767px) {
     html {
@@ -436,6 +483,27 @@
                 justify-self: left;
                 margin-left: 0;
             }
+        }
+    }
+    .about-technologies {
+        &__title {
+            max-width: 550px;
+        }
+    }
+    .about-skills {
+        &__title {
+            max-width: initial;
+        
+        }
+    }
+    .about-steps {
+        overflow: hidden;
+        &__title {
+            max-width: 600px;
+        }
+        &__wrapper {
+            gap: initial;
+            justify-content: space-between;
         }
     }
    

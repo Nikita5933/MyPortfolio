@@ -1,3 +1,5 @@
+import { calcScroll } from "../../../js/import/components";
+
 const menuWrapper = document.querySelector(".header__head-wrapper");
 const menuBtn = document.querySelector('.header__head-arrow');
 const parallaxItems = document.querySelectorAll('.header__elipse');
@@ -62,18 +64,3 @@ function parallax(event) {
 
 // Scroll problem fix
 
-function calcScroll() {
-    let div = document.createElement('div');
-
-    div.style.width = '50px';
-    div.style.height = '50px';
-    div.style.overflowY = 'scroll';
-    div.style.visibility = 'hidden';
-
-    document.body.appendChild(div);
-    let scrollWidth = div.offsetWidth - div.clientWidth;
-
-    div.remove();
-
-    return scrollWidth;
-}
