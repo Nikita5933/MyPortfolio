@@ -486,20 +486,25 @@
         }
     }
     .about-technologies {
+        padding-bottom: 5px;
         &__title {
-            max-width: 550px;
+            max-width: 480px;
         }
     }
     .about-skills {
+        padding-top: 40px;
         &__title {
             max-width: initial;
-        
+            margin-bottom: 20px;
+        }
+        &__wrapper {
+            gap: 15px;
         }
     }
     .about-steps {
         overflow: hidden;
         &__title {
-            max-width: 600px;
+            max-width: 520px;
         }
         &__wrapper {
             gap: initial;
@@ -521,7 +526,7 @@
                 width: 100%;
                 align-items: flex-start;
                 left: 0;
-                top: 96px;
+                top: 89px;
                 max-width: initial;
                 height: 100vh;
                 position: absolute;
@@ -550,7 +555,7 @@
             flex-direction: column;
             height: 50%;
             text-align: center;
-            margin-top: rem(70);
+            margin-top: rem(100);
         }
         &__link a {
             font-size: rem(32);
@@ -651,6 +656,36 @@
         &_fz18 {
             font-size: 1.5rem;
         }
+        &_fz24 {
+            font-size:  1.75rem;
+        }
+    }
+    .header-about {
+        & .header__head-wrapper {
+            background-color: rgba(51, 50, 50, 0.968627451); 
+        }
+    }
+    .about-technologies {
+        &__title {
+            max-width: 390px;
+            margin: 10px auto;
+        }
+        & .about__skills {
+            margin-bottom: 50px;
+        }
+    }
+    .about-steps {
+        &__title {
+            max-width: initial;
+            margin: 0 auto 25px auto;
+            &::after {
+                display: none;
+            }
+            &::before {
+                display: none;
+            }
+        }
+       
     }
 }
 
@@ -731,6 +766,35 @@
     .footer {
         &__wrapper {
             grid-template-columns: 2fr 4fr;
+        }
+    }
+    .title {
+        &_fz24 {
+            font-size: 2rem;
+        }
+        &_fz16 {
+            font-size: 1.35rem;
+        }
+    }
+    .about-technologies {
+        &__title {
+        max-width: initial;
+        &::after {
+            display: none;
+        }
+        &::before {
+            display: none;
+        }
+    }
+    }
+    .about-steps {
+        &__slide {
+            &-title {
+                font-size: 16px;
+            }
+            &-descr {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -818,6 +882,16 @@
             }
         }
     }
+    .about-skills {
+        padding: 40px 0;
+        &__container {
+            width: 310px;
+            height: 410px;
+        }
+        &__overlay {
+            font-size: 16px;
+        }
+    }
 
 }
 @media (max-width: 330px) {
@@ -842,9 +916,28 @@
             }
         }
     }
+    .about-skills {
+        &__container {
+            width: 290px;
+            height: 390px;
+        }
+        &__overlay {
+            font-size: 15px;
+        }
+        &__list {
+            padding-top: 6px;
+        }
+    }
 }
 
 @media (max-width: 300px) {
+    .header {
+        &__head {
+            &-arrow {
+                left: 238px;
+            }
+        }
+    }
     .about {
         &__block {
             width: 230px;
@@ -873,7 +966,19 @@
         &__slider {
             max-width: 218px;
         }
-        
+    }
+    .about-skills {
+        &__container {
+            width: 260px;
+            height: 360px;
+        }
+        &__overlay {
+            font-size: 13px;
+            line-height: 15px;
+        }
+        &__list {
+            padding-top: 0px;
+        }
     }
 }
 

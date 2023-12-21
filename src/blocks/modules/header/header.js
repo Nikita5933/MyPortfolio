@@ -8,6 +8,14 @@ const scroll = calcScroll();
 
 // Menu 
 
+window.addEventListener('resize', () => {
+    if (document.body.clientWidth < 575 - scroll) {
+        menuWrapper.style.visibility = 'hidden';
+    } else {
+        menuWrapper.style.visibility = 'visible';
+    }
+});
+
 menuBtn.addEventListener('click', () => {
     links.forEach(item => {
         item.addEventListener('click', () => {
@@ -29,15 +37,13 @@ function fadeOut() {
     menuWrapper.classList.remove('fade_active');
     menuWrapper.classList.add('fade_disable');
     setTimeout(()=> {
-        document.body.style.marginRight = `0px`;
         document.body.style.overflowY = 'scroll';
         menuWrapper.style.visibility = 'hidden';
     },401);
 }
 function fadeIn() {
     menuWrapper.style.visibility = 'visible';
-    document.body.style.marginRight = `${scroll}px`;
-    menuWrapper.style.width = `calc(100% - ${scroll}px)`;
+    menuWrapper.style.width = `100%`;
     document.body.style.overflowY = 'hidden';
     menuWrapper.classList.add('fade_active');
     menuWrapper.classList.remove('fade_disable');
@@ -61,6 +67,4 @@ function parallax(event) {
   });
 }
 }
-
-// Scroll problem fix
 
